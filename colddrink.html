@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Drink</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url(image/imag2.jpg);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 70%;
+            height: 50%;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .card .info {
+            margin: 10px 0;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: green;
+            font-size: 1em;
+        }
+
+        .card button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #218838;
+        }
+
+        #totalPrice, h2 {
+            color: aliceblue;
+        }
+
+        .menu-text {
+            color: aliceblue;
+        }
+
+        .total-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .clear-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .clear-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cold Drink & Tea</h1>
+    <div class="grid-container">
+        <div class="card" id="card1">
+            <img src="image/cold drink/all product fo colddrink.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>All Product of Cold Drink</h3>
+                <p>Full price: 200</p>
+                <p>Half price: 100</p>
+                <div>
+                    <input type="radio" name="price1" value="200" checked> Full
+                    <input type="radio" name="price1" value="100"> Half
+                </div>
+            </div>
+            <button onclick="addToCart(1)">Add to Cart</button>
+        </div>
+
+        <div class="card" id="card2">
+            <img src="image/cold drink/green tea.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Green Tea</h3>
+                <p>Full price: 80</p>
+                <div>
+                    <input type="radio" name="price2" value="80" checked> 80
+                </div>
+            </div>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+
+        <div class="card" id="card3">
+            <img src="image/cold drink/ice coffe.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Ice Coffee</h3>
+                <p>Full price: 150</p>
+                <div>
+                    <input type="radio" name="price3" value="150" checked> 150
+                </div>
+            </div>
+            <button onclick="addToCart(3)">Add to Cart</button>
+        </div>
+
+        <div class="card" id="card4">
+            <img src="image/cold drink/kawaha tea.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Kawaha Tea</h3>
+                <p>Full price: 70</p>
+                <div>
+                    <input type="radio" name="price4" value="70" checked> 70
+                </div>
+            </div>
+            <button onclick="addToCart(4)">Add to Cart</button>
+        </div>
+
+        <div class="card" id="card5">
+            <img src="image/cold drink/masala tea.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Masala Tea</h3>
+                <p>Full price: 80</p>
+                <div>
+                    <input type="radio" name="price5" value="80" checked> 80
+                </div>
+            </div>
+            <button onclick="addToCart(5)">Add to Cart</button>
+        </div>
+
+        <div class="card" id="card6">
+            <img src="image/cold drink/milk tea.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Milk Tea</h3>
+                <p>Full price: 50</p>
+                <div>
+                    <input type="radio" name="price6" value="50" checked> 50
+                </div>
+            </div>
+            <button onclick="addToCart(6)">Add to Cart</button>
+        </div>
+
+        <div class="card" id="card7">
+            <img src="image/cold drink/peach juice.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Peach Juice</h3>
+                <p>Full price: 300</p>
+                <div>
+                    <input type="radio" name="price7" value="300" checked> 300
+                </div>
+            </div>
+            <button onclick="addToCart(7)">Add to Cart</button>
+        </div>
+        
+        <div class="card" id="card8">
+            <img src="image/cold drink/strawberry juice.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Strawberry Juice</h3>
+                <p>Full price: 300</p>
+                <div>
+                    <input type="radio" name="price8" value="300" checked> 300
+                </div>
+            </div>
+            <button onclick="addToCart(8)">Add to Cart</button>
+        </div>
+        
+        <div class="card" id="card9">
+            <img src="image/cold drink/watermelon juice.jpeg" alt="Product Image">
+            <div class="info">
+                <h3>Watermelon Juice</h3>
+                <p>Full price: 300</p>
+                <div>
+                    <input type="radio" name="price9" value="300" checked> 300
+                </div>
+            </div>
+            <button onclick="addToCart(9)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="total-container">
+        <h2>Total Price: <span id="totalPrice">0</span></h2>
+        <button class="clear-button" onclick="clearCart()">Clear</button>
+    </div>
+
+    <script>
+        let totalPrice;
+
+        window.onload = function() {
+            if (localStorage.getItem("totalCartPrice") === 'null' || localStorage.getItem("totalCartPrice") === null) {
+                totalPrice = 0;
+            } else {
+                totalPrice = localStorage.getItem("totalCartPrice");
+            }
+            document.getElementById('totalPrice').innerText = totalPrice;
+        }
+
+        function addToCart(cardId) {
+            const priceInputs = document.getElementsByName('price' + cardId);
+            let selectedPrice = 0;
+            for (const input of priceInputs) {
+                if (input.checked) {
+                    selectedPrice = parseInt(input.value);
+                    break;
+                }
+            }
+            totalPrice = Number(totalPrice) + selectedPrice;
+            localStorage.setItem("totalCartPrice", totalPrice);
+            document.getElementById('totalPrice').innerText = totalPrice;
+        }
+
+        function clearCart() {
+            totalPrice = 0;
+            localStorage.setItem("totalCartPrice", totalPrice);
+            document.getElementById('totalPrice').innerText = totalPrice;
+        }
+    </script>
+</body>
+</html>

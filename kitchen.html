@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Food</title>
+    <link rel="stylesheet" href="menu.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f0f5f1; */
+    background-image: url(image/imag2.jpg);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: aliceblue;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo i {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight:bold ;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+header nav ul li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-login input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-login .login-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: #e6f9e6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text .offer {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.hero-text h1 span {
+    color: #4CAF50;
+}
+
+.hero-text .description {
+    color: #666;
+    margin: 20px 0;
+}
+
+.hero-text .Order {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-icons i {
+    font-size: 20px;
+}
+footer .social-icons i:hover{
+    cursor: pointer;
+    zoom: 2;
+}
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                MY Kitchen
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About </a></li>
+                </ul>
+            </nav>
+            <div class="search-login">
+                <input type="text" placeholder="Search">
+                <button class="login-button">Login</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero-text">
+                <p class="offer">Exclusive Offer - 10% Off This Week</p>
+                <h1>We Provide the Best <span>Delicious</span> Food for You</h1>
+                <!-- <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor dui sed nibh vel sit at pharetra consectetur pretium.</p> -->
+                <a href="menu.html"><button class="Order">Order Now</button></a>
+            </div>
+            <div class="hero-image">
+                <img src="image/menu image/imag1.jpg" alt="Farmer with vegetables">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-skype"></i>
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <p>&copy; 2024 Organic Food. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
